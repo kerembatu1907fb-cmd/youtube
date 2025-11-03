@@ -1,0 +1,11 @@
+{
+  "name": "express-vite-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "vercel-build": "cd client && npm ci && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
