@@ -1,23 +1,18 @@
 import express from "express";
-import path from "path";
-import { fileURLToPath } from "url";
+import cors from "cors";
 
 const app = express();
 
-// __dirname for ESM
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Middleware
+app.use(cors());
+app.use(express.json());
 
-// Serve static files from client/dist
-app.use(express.static(path.join(__dirname, "../client/dist")));
-
+// Basit test endpoint
 app.get("/api", (req, res) => {
-  res.json({ message: "Hello from Express API!" });
+  res.json({ message: "Hello from Express API! 🚀" });
 });
 
-// SPA fallback
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
-});
+// Diğer endpoint'leri buraya ekleyebilirsin
+// app.post("/api/data", (req, res) => { ... });
 
 export default app;
