@@ -1,6 +1,17 @@
 #!/bin/bash
-chmod +x ./client/node_modules/.bin/* || true
+echo "🚀 Starting Vercel build..."
+
+# client dizinine gir
 cd client
+
+echo "📦 Installing dependencies..."
 npm install
-npm run build
+
+echo "🔐 Fixing executable permissions..."
+chmod -R +x ./node_modules/.bin || true
+
+echo "⚙️ Building client with Vite..."
+bash build.sh
+
+# root’a geri dön
 cd ..
