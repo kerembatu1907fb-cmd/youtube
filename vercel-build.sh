@@ -1,12 +1,11 @@
 #!/bin/bash
-# Vercel build script (izin hatası bypass)
+set -e
 
-echo ">>> Installing client dependencies..."
+echo "📦 Installing client dependencies..."
 cd client
-npm ci || npm install
+npm ci
 
-echo ">>> Building client using npx..."
-npx --yes vite build || npx vite build
+echo "🏗️ Building client with Vite..."
+npx vite build --force
 
-cd ..
-echo ">>> ✅ Build tamamlandı!"
+echo "✅ Build completed!"
