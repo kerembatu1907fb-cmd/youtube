@@ -4,11 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "vercel-build": "cd client && npm ci && npm run build",
+    "build": "bash ./vercel-build.sh",
     "dev": "cd client && npm run dev",
     "start": "node api/index.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
   }
 }
