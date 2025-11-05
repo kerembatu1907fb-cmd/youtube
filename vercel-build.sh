@@ -6,13 +6,16 @@ echo "🚀 Starting Vercel build script..."
 # Client klasörüne geç
 cd client
 
-# Node modüllerini yükle
+# Bağımlılıkları yükle
 echo "📦 Installing client dependencies..."
 npm install
 
-# Vite build işlemini başlat
-echo "🏗️ Running Vite build..."
-npx vite build
+# Build komutuna izin ver
+chmod +x ./node_modules/.bin/vite || true
+
+# Build işlemini başlat
+echo "🏗️ Running npm build..."
+npm run build
 
 # Üst klasöre geri dön
 cd ..
