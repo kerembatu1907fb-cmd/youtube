@@ -10,8 +10,9 @@ cd client
 echo "📦 Installing client dependencies..."
 npm install
 
-# Build komutuna izin ver
-chmod +x ./node_modules/.bin/vite || true
+# Vite ve node_modules içindeki bin klasörüne izin ver
+echo "🔧 Fixing vite permissions..."
+chmod -R +x ./node_modules/.bin || true
 
 # Build işlemini başlat
 echo "🏗️ Running npm build..."
