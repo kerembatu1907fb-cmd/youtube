@@ -4,14 +4,15 @@
 echo ">>> Fixing vite permission issue..."
 
 # İzinleri düzelt
-chmod +x ./client/node_modules/.bin/vite || true
+chmod +x ./client/node_modules/.bin/* || true
 
 # Client build
 cd client
 echo ">>> Building Vite client..."
+npm install
 npm run build
 
-# Eğer API varsa test etmeden önce geri dön
+# API varsa geri dön
 cd ..
 
 echo ">>> Build tamamlandı ✅"
