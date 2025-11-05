@@ -1,11 +1,15 @@
 #!/bin/bash
 set -e
 
-# Client klasörüne gir
+echo "🚀 Starting Vercel build script..."
+
+# Client klasörüne geç
 cd client
 
 # Node modüllerini yükle
 npm install
 
-# Vite'e doğrudan izin hatası oluşmaması için bash üzerinden çalıştır
+# Vite build işlemini başlat
 npx vite build
+
+echo "✅ Build completed successfully!"
