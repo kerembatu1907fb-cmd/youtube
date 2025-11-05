@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 echo "🚀 Starting Vercel build script..."
@@ -10,9 +10,9 @@ cd client
 echo "📦 Installing client dependencies..."
 npm install
 
-# Vite ve node_modules içindeki bin klasörüne izin ver
+# Vite izinlerini düzelt
 echo "🔧 Fixing vite permissions..."
-chmod -R +x ./node_modules/.bin || true
+find ./node_modules/.bin -type f -exec chmod +x {} \; || true
 
 # Build işlemini başlat
 echo "🏗️ Running npm build..."
