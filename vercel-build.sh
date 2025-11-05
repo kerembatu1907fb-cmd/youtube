@@ -1,13 +1,12 @@
 #!/bin/bash
-# Vercel özel build scripti (izin hatası çözümüyle)
+# Vercel build script (izin hatası bypass)
 
-echo ">>> Installing dependencies..."
+echo ">>> Installing client dependencies..."
 cd client
-npm install
+npm ci || npm install
 
-echo ">>> Building Vite client (using npx)..."
-# Local bin erişimi yerine global npx kullanıyoruz
-npx vite build
+echo ">>> Building client using npx..."
+npx --yes vite build || npx vite build
 
 cd ..
-echo ">>> Build tamamlandı ✅"
+echo ">>> ✅ Build tamamlandı!"
