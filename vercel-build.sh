@@ -1,11 +1,17 @@
 #!/bin/bash
-set -e
+# Vercel özel build scripti
 
-echo "📦 Installing client dependencies..."
+set -e  # hata olursa scripti durdurur
+
+echo ">>> Fixing vite permission issue..."
+
+# İzinleri düzelt
+chmod -R 755 ./client/node_modules/.bin || true
+
+# Client build
 cd client
-npm ci
-
-echo "🏗️ Building client with Vite..."
+echo ">>> Building Vite client..."
 npx vite build --force
 
-echo "✅ Build completed!"
+cd ..
+echo ">>> Build tamamlandı ✅"
