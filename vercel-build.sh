@@ -1,17 +1,11 @@
 #!/bin/bash
-# Vercel özel build scripti
+set -e
 
-set -e  # hata olursa scripti durdurur
-
-echo ">>> Fixing vite permission issue..."
-
-# İzinleri düzelt
-chmod -R 755 ./client/node_modules/.bin || true
-
-# Client build
+# Client klasörüne gir
 cd client
-echo ">>> Building Vite client..."
-npx vite build --force
 
-cd ..
-echo ">>> Build tamamlandı ✅"
+# Node modüllerini yükle
+npm install
+
+# Vite'e doğrudan izin hatası oluşmaması için bash üzerinden çalıştır
+npx vite build
