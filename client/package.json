@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "my-app": "github:kerembatu1907fb-cmd/youtube-ai-bolt-components",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "youtube-ai-bolt-components": "github:kerembatu1907fb-cmd/youtube-ai-bolt-components"
   },
   "devDependencies": {
-    "vite": "^5.4.21",
-    "@vitejs/plugin-react": "^5.0.4"
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^5.4.21"
   }
 }
