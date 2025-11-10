@@ -1,0 +1,39 @@
+[33m3dd1e18[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m update files
+[33m33c2cc3[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m fix: executable build scripts for Vercel
+[33mf071568[m update files
+[33m8ecf832[m update files
+[33mf3580af[m Update vercel-build.sh
+[33m5782fb8[m Update vercel.json
+[33m2f45dd0[m Update package.json
+[33m9590238[m update files
+[33md6771e2[m update files
+[33m8b107a6[m fix: add chmod for vite before build
+[33m13d4272[m fix: use npx vite build for vercel
+[33m3b3ace1[m Fix vite permission for Vercel
+[33mc0981f3[m Update vercel-build.sh
+[33m5e0dec2[m update files
+[33m5988b13[m Update vercel-build.sh
+[33m30d48c3[m Update vercel-build.sh
+[33mda5a980[m update files
+[33mfc4fb39[m Update vercel.json
+[33mb29b936[m Make vercel-build.sh executable
+[33m5a6ff5c[m Update package-lock.json
+[33m2d9b3ae[m Add Node 22.x engine to client package.json
+[33mefc3f55[m Make vercel-build.sh executable and fix vite build
+[33m56350eb[m Update vercel-build.sh
+[33m5d354db[m Update vercel-build.sh
+[33m2c08630[m Update package.json
+[33mc5d67e2[m update files
+[33mc7b8086[m update files
+[33m2b4b0b0[m Update vercel-build.sh
+[33m392068e[m Update vercel-build.sh
+[33me7c5c1e[m Update package.json
+[33m1a439fd[m Add executable permission to vercel-build.sh
+[33me1d6b2b[m Rebuild: clean node_modules and reinstall
+[33m9b2fffb[m update files
+[33m3ed332e[m update files
+[33mc87d5c0[m update files
+[33mcf02336[m update files
+[33mffd3bc3[m merge remote main into local
+[33m261594d[m Initial commit
+[33m9b7c773[m first commit
