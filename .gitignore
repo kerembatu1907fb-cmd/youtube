@@ -1,3 +1,4 @@
 .vercel
 node_modules/
 client/node_modules/
+node_modules/youtube-ai-bolt-components/node_modules
