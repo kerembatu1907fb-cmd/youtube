@@ -7,7 +7,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "client/vite.config.mjs",
+      "src": "vercel-build.sh",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "client/dist"
@@ -15,7 +15,13 @@
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/index.js" },
-    { "src": "/(.*)", "dest": "client/dist/index.html" }
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/dist/index.html"
+    }
   ]
 }
