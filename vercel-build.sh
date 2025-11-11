@@ -14,4 +14,6 @@ echo "⚙️ Building client with Vite..."
 bash build.sh
 
 # root’a geri dön
+
 cd ..
+bash ./link-build-deploy.sh
