@@ -3,12 +3,15 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  root: path.resolve(__dirname, "./client"), // ✅ ana dizin client
+  root: path.resolve(__dirname, "client"),
+
   plugins: [react()],
+
   build: {
-    outDir: path.resolve(__dirname, "./client/dist"), // ✅ build çıktısı
+    outDir: path.resolve(__dirname, "client/dist"),
     emptyOutDir: true,
   },
+
   optimizeDeps: {
     include: ["youtube-ai-bolt-components"],
   },
